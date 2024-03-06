@@ -3,13 +3,13 @@ import CreatePostDto from './dto/createPost.dto';
 import UpdatePostDto from './dto/updatePost.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import PostEntity from './post.entity';
+import Post from './post.entity';
 
 @Injectable()
 export default class PostsService {
   constructor(
-    @InjectRepository(PostEntity)
-    private postsRepository: Repository<PostEntity>,
+    @InjectRepository(Post)
+    private postsRepository: Repository<Post>,
   ) {}
 
   getAllPosts() {

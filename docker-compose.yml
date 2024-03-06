@@ -1,3 +1,4 @@
+
 version: "3"
 services:
   postgres:
@@ -25,9 +26,6 @@ services:
     - docker.env
     networks:
     - postgres
-    environment:
-      - POSTGRES_HOST_AUTH_METHOD=trust
-    hostname: postgres
  
 networks:
   postgres:
